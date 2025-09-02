@@ -1,4 +1,5 @@
-import {motion} from 'framer-motion';
+import {motion, useScroll, useTransform} from 'framer-motion';
+
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -8,13 +9,21 @@ const navLinks = [
 
 const NavBar = () => {
   
+  const { scrollY } = useScroll();
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 100],
+    ['rgba(34, 34, 34, 100)', 'rgba(34, 34, 34, 0.85)'],
+  )
   return (
     <>
-    <nav className=" bg-primary top-0 sticky  border-b border-amber-100 text-cream z-50">
+    <motion.nav
+    style={{ backgroundColor, backdropFilter: ' blur(3px)' }}
+    className=" bg-primary top-0 sticky  border-b border-amber-100 text-cream z-50">
       <motion.div 
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 2, delay: 2 }}
+      transition={{ duration: 2, delay: 2,  }}
       className="mx-auto flex items-center justify-end space-x-2.5 px-4 py-3">
         {navLinks.map((link) => (
           <a
@@ -26,7 +35,7 @@ const NavBar = () => {
           </a>
         ))}
       </motion.div>
-    </nav>
+    </motion.nav>
     
     </>
   )
