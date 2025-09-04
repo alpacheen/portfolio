@@ -19,8 +19,8 @@ export const projects: Project[] = [
     link: "https://freecommerce.com",
     },
     {id: 3,
-    title: "Free-Commerce",
-    description: "A community platform to give away items and swap goods.",
+    title: "Muir Plumbing",
+    description: "A local plumbing business.",
     link: "https://freecommerce.com",
     }
 ]

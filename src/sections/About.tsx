@@ -22,7 +22,7 @@ const About = () => {
         web apps. I love working with React, TypeScript, and animations
         that make interfaces feel alive.
       </motion.p>
-      <div></div>
+      
     </section>
   );
 };

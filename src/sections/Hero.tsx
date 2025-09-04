@@ -24,6 +24,7 @@ const Hero = () => {
         <motion.h1 className="text-6xl md:text-8xl font-extrabold font-mono text-balance text-amber-100">
           <AnimatedName />
         </motion.h1>
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: displayText ? 1 : 0 }}
