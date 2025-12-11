@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Galindo&family=Knewave&family=Luckiest+Guy&display=swap');
 @import "tailwindcss";
+
+
+
 
 @theme{
   --color-primary: #231f20;
   --color-cream: #faebd7;
-  
+  --font-galindo: 'Galindo';
+  --font-luckiest-guy: 'Luckiest Guy';
+  --font-knewave: 'Knewave';
+  --font-coiny: 'Coiny';
+
 }
 html {
   scroll-behavior: smooth;
